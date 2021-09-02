@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+    <form th:action="@{/register}" th:object="${user}" method="post">
+        <div class="login">
+            <div class="login-screen">
+                <div class="app-title">
+                    <h1>Register</h1>
+                </div>
+
+                <div class="login-form">
+                    <div class="control-group">
+                        <input type="number" class="login-field" value="" placeholder="id" id="login-name"  required th:field="*{id}" >
+                        <label class="login-field-icon fui-user" for="login-name"></label>
+                    </div>
+
+                    <div class="control-group">
+                        <input type="text" class="login-field" value="" placeholder="name" id="login-pass" required th:field="*{name}">
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+
+                    <div class="control-group">
+                        <input type="text" class="login-field" value="" placeholder="username" id="login-pass" required th:field="*{username}">
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+
+                    <div class="control-group">
+                        <input type="password" class="login-field" value="" placeholder="password" id="login-pass" required th:field="*{password}">
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large btn-block">Register</button>
+                    <div th:if="${userExist}" class="error" style="color: red;">User Exist</div>
+                    <a class="login-link" href="/">Home</a>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+
+
+</body>
+
+</html>

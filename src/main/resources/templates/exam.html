@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link rel="stylesheet" href="" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+    <div class="control-group">
+        <div class="row">
+            <div class="col">
+                <!--important-->
+                <div class = "control-type">
+                    <ul class="list-group">
+                        <li class="list-group-item" th:each="q: ${question}">
+                            <p th:text="${q.question}"></p>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="col">
+                <!--imporant-->
+                
+                <form th:action="@{/getresult}" th:object="${answer}">
+                    <select th:field="*{answer1}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                    </select>
+                    <label>Question 1</label>
+                    <br>
+                    <select th:field="*{answer2}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                    </select>
+                    <label>Question 2</label>
+                    <br>
+                    <select th:field="*{answer3}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                    </select>
+                    <label>Question 3</label>
+                    <br>
+                    <select th:field="*{answer4}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                    </select>
+                    <label>Question 4</label>
+                    <br>
+                    <select th:field="*{answer5}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                    </select>
+                    <label>Question 5</label>
+                    <br>
+                    <select th:field="*{answer6}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                    </select>
+                    <label>Question 6</label>
+                    <br>
+                    <select th:field="*{answer7}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                    </select>
+                    <label>Question 7</label>
+                    <br>
+                    <select th:field="*{answer8}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                    </select>
+                    <label>Question 8</label>
+                    <br>
+                    <select th:field="*{answer9}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        </select>
+                    <label>Question 9</label>
+                    <br>
+                    <select th:field="*{answer10}">
+                        <option value="-">-</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                    </select>
+                    <label>Question 10</label>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
