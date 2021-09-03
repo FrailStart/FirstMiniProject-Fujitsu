@@ -14,7 +14,7 @@ public class ExamService {
     
 
     public ArrayList<ExamModel> generateQuestion(){
-        
+        //This is a absolute path
         String fileName="C:\\Users\\f.balili\\OneDrive - FUJITSU\\Desktop\\Java\\Mini Project\\miniproject (5)\\miniproject5\\miniproject5\\miniproject\\src\\main\\resources\\question.csv";
         String stringQuestion=new String();
         
